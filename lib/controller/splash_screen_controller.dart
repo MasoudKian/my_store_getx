@@ -5,6 +5,7 @@ import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 import 'package:my_store_getx/ui/view/home_page.dart';
 import 'package:my_store_getx/ui/view/intro_screen.dart';
+import 'package:my_store_getx/ui/view/login_screen.dart';
 
 class SplashScreenController extends GetxController {
   final RxString _connectionStatus = '-1'.obs;
@@ -35,7 +36,7 @@ class SplashScreenController extends GetxController {
     }
     if (_connectionStatus.value != '-1') {
       Future.delayed(const Duration(seconds: 5), () {
-        Get.to(() => const IntroScreen());
+        Get.to(() =>  LoginScreen());
       });
     }
   }

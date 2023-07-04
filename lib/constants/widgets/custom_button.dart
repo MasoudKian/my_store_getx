@@ -4,7 +4,7 @@ import 'package:get/get_core/src/get_main.dart';
 import 'package:my_store_getx/constants/constans.dart';
 
 class CustomButton extends StatelessWidget {
-  const CustomButton({super.key, required this.onTapped});
+  const CustomButton({super.key, required this.onTapped,});
 
   final VoidCallback onTapped;
   @override
@@ -22,7 +22,7 @@ class CustomButton extends StatelessWidget {
             width: Get.width,
             height: 65,
             child: const Center(
-              child: Text('بزن بریم خرید'),
+
             ),
           ),
         ),

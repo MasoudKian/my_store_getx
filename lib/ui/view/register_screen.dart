@@ -6,9 +6,10 @@ import 'package:lottie/lottie.dart';
 import 'package:my_store_getx/constants/constans.dart';
 import 'package:my_store_getx/controller/app_routes.dart';
 
-class LoginScreen extends StatelessWidget {
-  LoginScreen({super.key});
+class RegisterScreen extends StatelessWidget {
+  RegisterScreen({super.key});
 
+  TextEditingController nameController = TextEditingController();
   TextEditingController emailController = TextEditingController();
   TextEditingController passwordController = TextEditingController();
 
@@ -45,6 +46,12 @@ class LoginScreen extends StatelessWidget {
                 children: [
                   TextField(
                     onTap: () {},
+                    controller: nameController,
+                    style: const TextStyle(color: Colors.red),
+                    decoration: const InputDecoration(hintText: 'نام'),
+                  ),
+                  TextField(
+                    onTap: () {},
                     controller: emailController,
                     style: const TextStyle(color: Colors.red),
                     decoration: const InputDecoration(hintText: 'ایمیل'),
@@ -60,10 +67,10 @@ class LoginScreen extends StatelessWidget {
                     text: TextSpan(
                       style: const TextStyle(color: Colors.black),
                       children: [
-
                         TextSpan(
-                          text: 'رمز خود را فراموش کرده اید؟',
-                          style: const TextStyle(color: Colors.red,fontWeight: FontWeight.bold),
+                          text: 'با شرایط و قوانین برنامه موافق هستم',
+                          style: const TextStyle(
+                              color: Colors.green, fontWeight: FontWeight.bold),
                           recognizer: TapGestureRecognizer()..onTap = () {},
                         ),
                       ],
@@ -75,7 +82,7 @@ class LoginScreen extends StatelessWidget {
                       width: double.infinity,
                       child: ElevatedButton(
                         onPressed: () {},
-                        child: const Text('ورود'),
+                        child: const Text('ثبت نام'),
                       ),
                     ),
                   ),
@@ -85,14 +92,14 @@ class LoginScreen extends StatelessWidget {
                       style: const TextStyle(color: Colors.black),
                       children: [
                         const TextSpan(
-                          text: 'حساب کاربری ندارید ؟',
+                          text: 'حساب کاربری دارید ؟',
                         ),
                         TextSpan(
-                          text: 'ثبت نام',
+                          text: 'ورود',
                           style: const TextStyle(
                               color: Colors.green, fontWeight: FontWeight.bold),
                           recognizer: TapGestureRecognizer()..onTap = () {
-                            Get.toNamed(AppRoutes.registerScreen);
+                            Get.toNamed(AppRoutes.loginScreen);
                           },
                         ),
                       ],
